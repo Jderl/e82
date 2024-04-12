@@ -17,13 +17,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 //login route 
-Route::post('/login',[AuthController::class,'login']);
+Route::post('/login',[AuthController::class,'Login']);
 //registration route 
-Route::post('/login',[AuthController::class,'Register']);
+Route::post('/register',[AuthController::class,'Register']);
 //Forgot route 
-Route::post('/login',[ForgotController::class,'ForgotPassoword']);
+Route::post('/forgetpassword',[ForgotController::class,'ForgotPassoword']);
 //Reset password route 
-Route::post('/login',[ResetController::class,'ResetPassword']);
+Route::post('/resetpassword',[ResetController::class,'ResetPassword']);
 
 
 //get user route
