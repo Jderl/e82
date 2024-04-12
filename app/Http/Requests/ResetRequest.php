@@ -11,7 +11,7 @@ class ResetRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,9 @@ class ResetRequest extends FormRequest
     {
         return [
             //
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:6|confirmed'
         ];
     }
 }
