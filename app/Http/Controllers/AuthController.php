@@ -62,6 +62,6 @@ class AuthController extends Controller
                 'message' => $exception->getMessage(),
             ], 400);
         }
-        return response();
+       
     }
 }

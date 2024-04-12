@@ -11,7 +11,7 @@ class ForgetRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class ForgetRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            // Forgot validation
+            'email' => 'required',
         ];
     }
 }

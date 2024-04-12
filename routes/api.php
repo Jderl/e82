@@ -20,9 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/login',[AuthController::class,'Login']);
 //registration route 
 Route::post('/register',[AuthController::class,'Register']);
-//Forgot route 
-Route::post('/forgetpassword',[ForgotController::class,'ForgotPassoword']);
-//Reset password route 
+//forgot route 
+Route::post('/forgetpassword',[ForgotController::class,'ForgetPassoword']);
+//reset password route 
 Route::post('/resetpassword',[ResetController::class,'ResetPassword']);
 
 
